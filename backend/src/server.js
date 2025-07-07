@@ -37,6 +37,12 @@ app.use("/api/chat", chatRoutes);
 //   });
 // }
 
+// ✅ health-check route
+app.get("/", (req, res) => {
+  res.send("🚀 Chat App Backend API is running.");
+});
+
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   connectDB();
